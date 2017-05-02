@@ -1,0 +1,22 @@
+<h1>Welcome to Rubarb!</h1>
+
+<h2>Sign Up</h2>
+
+<% if flash.now[:errors] %>
+  <% flash.now[:errors].each do |error| %>
+    <%= error %>
+    <br>
+  <% end %>
+<% end %>
+
+<form action="/users" method="post">
+  <label>Username
+    <input type="text" name="user[username]">
+  </label>
+
+  <label>Password
+    <input type="password" name="user[password]">
+  </label>
+
+  <input type="submit" value="Sign Up">
+</form>
