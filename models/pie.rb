@@ -1,6 +1,6 @@
 class Pie
   attr_reader :flavor, :price
-  
+
   def initialize(flavor, price)
     @flavor = flavor
     @price = price
@@ -21,12 +21,12 @@ class Pie
     valid = true
 
     if @flavor.empty?
-      errors << "Username can't be blank"
+      errors << "Flavor can't be blank"
       valid = false
     end
 
     if @price.empty?
-      errors << "Password can't be blank"
+      errors << "Price can't be blank"
       valid = false
     end
 

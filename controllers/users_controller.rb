@@ -4,7 +4,6 @@ require_relative '../models/user.rb'
 class UsersController < ControllerBase
 
   def new
-    render :new
   end
 
   def create
