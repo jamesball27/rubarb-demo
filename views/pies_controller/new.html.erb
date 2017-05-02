@@ -1,0 +1,20 @@
+<h1>Create a New Pie</h1>
+
+<% if flash.now[:errors] %>
+  <% flash.now[:errors].each do |error| %>
+    <%= error %>
+    <br>
+  <% end %>
+<% end %>
+
+<form action="/pies" method="post">
+  <label>Flavor
+    <input type="text" name="pie[flavor]">
+  </label>
+
+  <label>Price
+    <input type="text" name="pie[price]">
+  </label>
+
+  <input type="submit" value="Create Pie">
+</form>

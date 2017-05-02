@@ -6,8 +6,9 @@ class User
     @password = password
   end
 
-  def errors
-    @errors ||= []
+  def save
+    return false unless valid?
+    true
   end
 
   def valid?
@@ -26,9 +27,8 @@ class User
     valid
   end
 
-  def save
-    return false unless valid?
-    true
+  def errors
+    @errors ||= []
   end
 
 end

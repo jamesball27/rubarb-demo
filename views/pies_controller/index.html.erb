@@ -1,0 +1,11 @@
+<h1>All the Pies!</h1>
+<a href="/pies/new">Create a New Pie</a>
+
+<ul>
+  <% @pies.each do |pie| %>
+    <li>
+      <h5>Flavor: <%= pie.flavor %></h5>
+      <h5>Price: $<%= pie.price %></h5>
+    </li>
+  <% end %>
+</ul>
